@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverse Laplace Transform</title>
+</head>
+<body>
+    <h1>Inverse Laplace Transform</h1>
+    <form method="POST">
+        <label for="laplace_transform_input">Enter Laplace-transformed function (in terms of 's'): </label>
+        <input type="text" id="laplace_transform_input" name="laplace_transform_input" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <h2>Error:</h2>
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>

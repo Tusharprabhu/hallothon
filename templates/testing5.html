@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binomial Expansion Calculator</title>
+</head>
+<body>
+    <h1>Binomial Expansion Calculator</h1>
+    <form method="POST">
+        Enter a function in terms of 'x' and 'n' (e.g., (1+x)**n): <input type="text" name="user_function" required>
+        <input type="submit" value="Calculate Binomial Expansion">
+    </form>
+
+    {% if user_function %}
+    <h2>Results for Function: {{ user_function }}</h2>
+
+    {% if binomial_expansion %}
+    <h3>Binomial Expansion:</h3>
+    <p>{{ binomial_expansion }}</p>
+    {% endif %}
+
+    {% if error_message %}
+    <h3>Error:</h3>
+    <p>{{ error_message }}</p>
+    {% endif %}
+
+    {% endif %}
+</body>
+</html>

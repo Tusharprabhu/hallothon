@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laplace Transform Calculator</title>
+</head>
+
+<body>
+    <h1>Laplace Transform Calculator</h1>
+    <form action="/testing" method="post">
+        <label for="Tfunc">Enter the time varying function:</label>
+        <input type="text" id="Tfunc" name="Tfunc" required>
+        <button type="submit">Calculate Laplace Transform</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+
+</html>
